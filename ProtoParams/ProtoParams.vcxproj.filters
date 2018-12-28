@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="proto">
+      <UniqueIdentifier>{560c7026-9f3b-451f-b5ef-8484c5900dfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Alogrithm">
+      <UniqueIdentifier>{13888be3-f90f-481a-99c0-954eb6578390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Alogrithm\convolution">
+      <UniqueIdentifier>{8dc350da-76bb-4c47-8d81-a1e458b1959d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtoIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proto\param.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParamHelper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="safe_queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proto\checkparam.pb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\threadpool.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\RunTimeHandle.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\BlobAnalysis.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\BoudarySearch.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\DOGCheck.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\FlatField.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\MaxMinValueCheck.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\MeanStandardCheck.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\Preprocess.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\Rectify.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\InspectProcedure.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\CheckMethod.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\CheckProcess.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\AlogrithmBase.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\AlogrithmData.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\cudaFunction.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\convolution\convolutionFFT2D.cuh">
+      <Filter>Alogrithm\convolution</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\convolution\ConvolutionFFT2D.h">
+      <Filter>Alogrithm\convolution</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\convolution\convolutionFFT2D_common.h">
+      <Filter>Alogrithm\convolution</Filter>
+    </ClInclude>
+    <ClInclude Include="GrabThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\GetGrayCurve.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+    <ClInclude Include="Alogrithm\Classify.h">
+      <Filter>Alogrithm</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtoParams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProtoIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proto\param.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ParamHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="proto\checkparam.pb.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\RunTimeHandle.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\BlobAnalysis.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\BoudarySearch.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\DOGCheck.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\FlatField.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\MaxMinValueCheck.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\MeanStandardCheck.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\Preprocess.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\Rectify.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\InspectProcedure.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\CheckProcess.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\CheckMethod.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\AlogrithmBase.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\AlogrithmData.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageIO.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\convolution\ConvolutionFFT2D.cpp">
+      <Filter>Alogrithm\convolution</Filter>
+    </ClCompile>
+    <ClCompile Include="GrabThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\GetGrayCurve.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Alogrithm\Classify.cpp">
+      <Filter>Alogrithm</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="proto\param.proto">
+      <Filter>proto</Filter>
+    </CustomBuild>
+    <CustomBuild Include="proto\checkparam.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="Alogrithm\cudaFunction.cu">
+      <Filter>Alogrithm</Filter>
+    </CudaCompile>
+    <CudaCompile Include="Alogrithm\convolution\convolutionFFT2D.cu">
+      <Filter>Alogrithm\convolution</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

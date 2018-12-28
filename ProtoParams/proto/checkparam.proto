@@ -1,0 +1,146 @@
+syntax = "proto3";
+package Parameters; 
+
+
+message GaussianParam//检测滤波器
+{
+	int32 sizex = 1;//X轴尺寸
+	int32 sizey = 2;//Y轴尺寸
+	float sigma = 3; //标准差
+	string KernelName = 4;//滤波器名称
+}
+message DOGparam//DOG检测
+{
+   GaussianParam refKernel = 2;//背景滤波器
+   int32 thresholddark = 3;//DOG低阈值
+   int32 thresholdlight = 4;//DOG高阈值
+}
+message MAXMINparm//高低值检测
+{
+	int32 threshigh = 1;//高值阈值
+	int32 threshlow = 2;//低值阈值
+}
+message EXPVARparam//期望方差检测
+{
+   float sigmatime = 1;//方差倍数
+}
+message GeoClassifiyParam//缺陷几何分类
+{
+  float minheight = 1;//缺陷最小高度
+  float maxheight = 2;//缺陷最大高度
+  float minwidth = 3;
+  float maxwidth = 4;
+  sint32 mindiff = 5;//缺陷能量低值
+  sint32 maxdiff = 6;//缺陷能量高值
+  float minarea = 7;//缺陷面积
+  float maxarea = 8;
+  string defectname = 9;//缺陷类型名称
+  int32 iconid = 10;
+}
+message SVMClassifyParam//图像分类器分类
+{
+  string modelPath = 1;//模型路径
+  map<int32, string> defectlabelname = 2;
+}
+message DTreeClassifyParam//图像分类器分类
+{
+  string modelPath = 1;//模型路径
+  map<int32, string> defectlabelname = 2;
+}
+message CaffeClassifyParam//图像分类器分类
+{
+  string modelPath = 1;//模型路径
+  map<int32, string> defectlabelname = 2;
+}
+message BoundSearchParam//边界搜索参数
+{
+   float leftRange1 = 1;
+   float leftRange2 = 2;
+   float rightRange1 = 3;
+   float rightRange2 = 4;
+}
+
+message InspectParam
+{
+  //Alogrithm param
+  int32 dstvaluefrd = 1; // Flat Field param
+  int32 dstvaluebgd = 2;
+  repeated BoundSearchParam boundsearchlist= 3; // Bound Search param 
+  enum CheckType {
+    DOG = 0;
+    MAXMIN = 1;
+    EXPVAR = 2;
+  }
+  CheckType checktype = 4; //检测类型
+  DOGparam dogParam = 5;
+  EXPVARparam expvarParam = 6;
+  MAXMINparm maxminParam = 7;
+  float blobThr = 8;
+  enum ClassifictionType
+  {
+	Geometry = 0;
+	SVM = 1;
+	DTREE = 2;
+	CAFFE = 3;
+  }
+  ClassifictionType classificcationtype = 9;//分类方法
+  repeated GeoClassifiyParam geoParamlist = 10;//几何分类法
+  SVMClassifyParam svmParam = 11;//SVM分类法
+  DTreeClassifyParam DTreeParam = 12;//决策树分类法
+  CaffeClassifyParam CaffeParam = 13;
+  //Camera param
+  float exposureTime = 14;//曝光时间
+  float gain = 15;//增益
+  
+  //File param
+  string savepath = 16;//
+  string paramname = 17;
+  int32 layerType = 18;
+}
+
+message StripParam//分条设置
+{
+	float leftoffset = 1;
+	repeated float stripwidth = 2;
+	float allwidth = 3;
+	int32 stripcount = 4;
+}
+message SheetInfo//工单设置
+{
+	string username = 1; // 用户名
+	string machinenumber = 2; //机台号
+	string imageModel = 3; // 成像方式
+	string prodctname = 4; // 产品名
+	string ordernumber = 5; // 订单号
+	string batchnumber = 6; // 批号
+	string inspectparamname = 7; // 检测参数档
+	string remark = 9; // 备注
+	StripParam stripparam = 8; //分条参数
+	float  offsetBoundaryToZero = 10; // 产品边界到零点的物理距离，单位mm
+	float  startLength = 11; //产品开始拍摄的长度
+	bool   isLeftToRight = 12;//是否镜像
+
+	float boundOffsetLeft = 13;//左边界偏移量: 2018-5-16
+    float boundOffsetRight = 14;//右边界偏移量: 2018-5-16
+	float productThickness = 15;//产品厚度: 2018-5-25
+}
+
+message RunTimeParam//检测参数（非暴露）
+{
+	int32 threadnum = 1;//线程数
+	int32 freamwidth = 2;//原始图像尺寸
+	int32 freamheight = 3;
+	int32 dowmsample = 4;//下采样倍数，2的幂次方
+	int32 splitsizex = 5;//数据流切分尺寸
+	int32 splitsizey = 6;
+	bool  isgpu = 7;
+}
+
+message SystemRectifyParam//系统校正集
+{
+	float xphysicresolution = 1;//x方向像素分辨率:单位： mm/pix: 2018-5-16
+	float yphysicresolution = 3;//y方向像素分辨率:单位： mm/pix：2018-5-16
+	float lengthPerFream = 2;//每帧图像拍摄长度：单位： mm
+	string rectifyparamfilepath = 4;
+	int32 offsetY = 5;
+}

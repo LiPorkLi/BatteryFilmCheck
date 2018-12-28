@@ -1,0 +1,12 @@
+syntax = "proto3";
+package MainParam; 
+message param
+{ 
+   map<string, string> param_list=1;
+}
+message testParam
+{
+	int32 id = 1;
+	string name = 2;
+	repeated int32 idx = 3;
+}
